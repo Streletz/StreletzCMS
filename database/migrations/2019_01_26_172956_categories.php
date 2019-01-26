@@ -19,9 +19,9 @@ class Categories extends Migration
      */
     public function up()
     {
-        if (! Schema::hasTable('password_resets')) {
+        if (! Schema::hasTable('categories')) {
             Schema::create('categories', function (Blueprint $table) {
-                $table->increments('id');
+                $table->increments('id',255);
                 $table->string('name')->unique();
             });
         }
